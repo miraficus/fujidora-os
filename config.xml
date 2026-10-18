@@ -12,21 +12,21 @@
         <packagemanager>dnf</packagemanager>
     </preferences>
 
-    <!-- REPOZITÁŘE POUŽÍVAJÍCÍ METALINKY -->
+    <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->
     <repository type="rpm-md" alias="fedora">
-        <source path="https://mirrors.fedoraproject.org/metalink?repo=fedora-44&amp;arch=x86_64"/>
+        <source path="https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Everything/x86_64/os/"/>
     </repository>
 
     <repository type="rpm-md" alias="fedora-updates">
-        <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f44&amp;arch=x86_64"/>
+        <source path="https://dl.fedoraproject.org/pub/fedora/linux/updates/44/Everything/x86_64/"/>
     </repository>
 
     <repository type="rpm-md" alias="rpmfusion-free">
-        <source path="https://mirrors.rpmfusion.org/metalink?repo=free-fedora-44&amp;arch=x86_64"/>
+        <source path="https://mirrors.rpmfusion.org/free/fedora/development/rawhide/Everything/x86_64/os/"/>
     </repository>
-
+    
     <repository type="rpm-md" alias="rpmfusion-nonfree">
-        <source path="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-44&amp;arch=x86_64"/>
+        <source path="https://mirrors.rpmfusion.org/nonfree/fedora/development/rawhide/Everything/x86_64/os/"/>
     </repository>
 
     <!-- COPR REPOZITÁŘE (zůstávají přesně tak, jak fungovaly) -->

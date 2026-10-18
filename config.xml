@@ -39,6 +39,7 @@
         <package name="filesystem"/>
         <package name="glibc"/>
         <package name="dnf"/>
+        <package name="dnf-plugins-core"/>
         <package name="bash"/>
         <package name="coreutils"/>
     </packages>
@@ -86,6 +87,10 @@
         <package name="openrgb"/>
         <package name="piper"/>
         <package name="gparted"/>
+        <package name="htop"/>
+        <package name="nano"/>
+        <package name="thunderbird"/>
+        <package name="qbittorrent"/>
         
         <!-- KDE DESKTOP APLIKACE -->
         <package name="plasma-discover"/>

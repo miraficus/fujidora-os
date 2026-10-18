@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image name="fujidora" profile="live" schemaversion="7.4">
+<image name="fujidora" schemaversion="7.4">
     <description type="system">
         <author>Miraficus</author>
         <contact>vas@email.cz</contact>
@@ -7,11 +7,9 @@
     </description>
     
     <preferences>
-        <type image="iso" format="iso" hybrid="true"/>
+        <type image="iso" hybrid="true"/>
         <version>1.4.2</version>
         <packagemanager>dnf</packagemanager>
-        <locale>cs_CZ.UTF-8</locale>
-        <keymap>cz</keymap>
     </preferences>
 
     <!-- REPOZITÁŘE FEDORA 44 -->
@@ -45,7 +43,7 @@
         <package name="wireplumber"/>
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
-        <package name="flatpak"/> <!-- Nutné pro instalaci herních launcherů -->
+        <package name="flatpak"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>
@@ -58,8 +56,8 @@
         <package name="kernel-cachyos"/>
         <package name="kernel-cachyos-devel-matched"/>
         
-        <!-- NATIVNÍ HERNÍ UTILITY A APLIKACE Z VAŠEHO SEZNAMU -->
-        <package name="steam"/> <!-- Nativní RPM verze pro SteamVR -->
+        <!-- NATIVNÍ HERNÍ UTILITY A APLIKACE -->
+        <package name="steam"/>
         <package name="mangohud"/>
         <package name="gamemode"/>
         <package name="hhd"/>
@@ -69,15 +67,15 @@
         <package name="conky"/>
         <package name="filezilla"/>
         <package name="openrgb"/>
-        <package name="piper"/> <!-- Nastavení herních myší -->
+        <package name="piper"/>
         <package name="gparted"/>
         
-        <!-- KDE DESKTOP APLIKACE Z VAŠEHO SEZNAMU -->
-        <package name="plasma-discover"/> <!-- Discover Store -->
-        <package name="gwenview"/>        <!-- Prohlížeč obrázků -->
-        <package name="ark"/>             <!-- Rozbalování archívů (ZIP, RAR, TAR) -->
-        <package name="spectacle"/>       <!-- Snímky obrazovky -->
-        <package name="kamoso"/>          <!-- Webkamera -->
-        <package name="kora-icon-theme"/> <!-- Váš oblíbený icon pack obsažený přímo ve Fedoře -->
+        <!-- KDE DESKTOP APLIKACE -->
+        <package name="plasma-discover"/>
+        <package name="gwenview"/>
+        <package name="ark"/>
+        <package name="spectacle"/>
+        <package name="kamoso"/>
+        <package name="kora-icon-theme"/>
     </packages>
 </image>

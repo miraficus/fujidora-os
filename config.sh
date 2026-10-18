@@ -33,3 +33,7 @@ cat << 'EOF' > /etc/skel/.config/kdeglobals
 [KDE]
 LookAndFeelPackage=Monochrome
 EOF
+
+# Nastavení systémového jazyka a klávesnice
+echo "LANG=cs_CZ.UTF-8" > /etc/locale.conf
+echo "KEYMAP=cz" > /etc/vconsole.conf

@@ -31,12 +31,12 @@
 
     <!-- KERNEL CACHYOS COPR -->
     <repository type="rpm-md" alias="copr-cachyos">
-        <source path="https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-44/copr.fedorainfracloud.org:bieszczaders:kernel-cachyos.repo"/>
+        <source path="https://download.copr.fedorainfracloud.org/results/bieszczaders/kernel-cachyos/fedora-44-x86_64/"/>
     </repository>
 
-    <!-- REGREET COPR (Nutné pro přihlašovací obrazovku) -->
+    <!-- REGREET COPR -->
     <repository type="rpm-md" alias="copr-regreet">
-        <source path="https://copr.fedorainfracloud.org/coprs/mystical-devil/ReGreet/repo/fedora-44/copr.fedorainfracloud.org:mystical-devil:ReGreet.repo"/>
+        <source path="https://download.copr.fedorainfracloud.org/results/mystical-devil/ReGreet/fedora-44-x86_64/"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->

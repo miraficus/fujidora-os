@@ -74,6 +74,7 @@
         <package name="greetd"/>
         <package name="ReGreet"/>
         <package name="cage"/>
+        <package name="gamescope"/>
         <package name="greetd-selinux"/>
         
         <!-- JÁDRO CACHYOS -->

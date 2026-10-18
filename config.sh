@@ -45,7 +45,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Používá se přepínač --system pro instalaci pro všechny uživatele
 flatpak install -y flathub com.heroicgameslauncher.hgl
 flatpak install -y flathub com.discordapp.Discord
-flatpak install -y flathub io.github.shiftkey.desktop
+flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub org.prismlauncher.PrismLauncher
 flatpak install -y flathub com.usebottles.bottles
 flatpak install -y flathub it.mijorus.gearlever

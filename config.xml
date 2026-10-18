@@ -67,6 +67,7 @@
         <package name="flatpak"/>
         <package name="sddm"/>
         <package name="sddm-kcm"/>
+        <package name="jetbrains-mono-fonts-all"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>

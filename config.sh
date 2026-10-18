@@ -43,13 +43,13 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Instalace vybraných Flatpak aplikací (například Steam, Heroic, Lutris atd.)
 # Používá se přepínač --system pro instalaci pro všechny uživatele
-flatpak install -y flathub com.heroicgameslauncher.Heroic
+flatpak install -y flathub com.heroicgameslauncher.hgl
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub io.github.shiftkey.desktop
 flatpak install -y flathub org.prismlauncher.PrismLauncher
 flatpak install -y flathub com.usebottles.bottles
 flatpak install -y flathub it.mijorus.gearlever
-flatpak install -y flathub com.github.marat_t.protontricks
+flatpak install -y flathub com.github.Matoking.protontricks
 flatpak install -y flathub one.ablaze.floorp
 flatpak install -y flathub net.lutris.Lutris
 flatpak install -y flathub com.github.theevilskeleton.ProtonPlus

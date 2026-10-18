@@ -22,11 +22,11 @@
     </repository>
 
     <repository type="rpm-md" alias="rpmfusion-free">
-        <source path="https://download.rpmfusion.org/free/fedora/releases/44/Everything/x86_64/os/"/>
+        <source path="https://mirrors.rpmfusion.org/free/fedora/releases/44/Everything/x86_64/os/"/>
     </repository>
     
     <repository type="rpm-md" alias="rpmfusion-nonfree">
-        <source path="https://download.rpmfusion.org/nonfree/fedora/releases/44/Everything/x86_64/os/"/>
+        <source path="https://mirrors.rpmfusion.org/nonfree/fedora/releases/44/Everything/x86_64/os/"/>
     </repository>
 
     <!-- KERNEL CACHYOS COPR -->

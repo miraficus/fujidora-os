@@ -22,7 +22,7 @@ jobs:
 
       - name: Instalace KIWI buildovacích nástrojů
         run: |
-          dnf install -y kiwi dnf-plugins-core git
+          dnf install -y kiwi python3-kiwi dnf5 git dnf-plugins-core
           dnf clean all
 
       - name: Sestavení ISO obrazu (KIWI-ng)

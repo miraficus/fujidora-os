@@ -9,7 +9,7 @@
     <preferences>
         <type image="iso"/>
         <version>1.0.0</version>
-        <packagemanager>dnf5</packagemanager>
+        <packagemanager>dnf</packagemanager>
     </preferences>
 
     <!-- REPOZITÁŘE FEDORA 44 -->
@@ -29,6 +29,15 @@
         <source path="https://fedorainfracloud.org"/>
     </repository>
 
+<!-- ZDE PŘIDEJTE BOOTSTRAP -->
+    <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="glibc"/>
+        <package name="dnf"/>
+        <package name="bash"/>
+        <package name="coreutils"/>
+    </packages>
+
     <!-- BALÍČKY -->
     <packages type="image">
     <!-- NUTNÉ PRO LIVE ISO -->
@@ -47,9 +56,6 @@
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
         <package name="flatpak"/>
-
-        <!-- SPRÁVCE BALÍČKŮ -->
-        <package name="dnf5"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>

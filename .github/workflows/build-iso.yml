@@ -22,8 +22,8 @@ jobs:
 
       - name: Instalace KIWI buildovacích nástrojů
         run: |
-          dnf install -y kiwi python3-kiwi dnf git dnf-plugins-core \
-            e2fsprogs e2fsprogs-extra btrfs-progs dosfstools xfsprogs \
+          dnf install -y kiwi python3-kiwi git dnf-plugins-core \
+            e2fsprogs btrfs-progs dosfstools xfsprogs \
             squashfs-tools xorriso genisoimage
           
           # Zajištění symlinků pro jistotu na obvyklých cestách

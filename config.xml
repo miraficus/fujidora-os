@@ -7,7 +7,7 @@
     </description>
     
     <preferences>
-        <type image="iso" hybrid="true"/>
+        <type image="iso" flags="hybrid"/>
         <version>1.4.2</version>
         <packagemanager>dnf</packagemanager>
     </preferences>

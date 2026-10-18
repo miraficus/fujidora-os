@@ -30,9 +30,8 @@
         <source path="https://download.copr.fedorainfracloud.org/results/mystical-devil/ReGreet/fedora-44-x86_64/"/>
     </repository>
 
-    <!-- RPM FUSION STEAM REPOZITÁŘ -->
     <repository type="rpm-md" alias="rpmfusion-nonfree-steam">
-        <source path="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-steam-44&amp;arch=x86_64"/>
+        <source path="https://download1.rpmfusion.org/nonfree/fedora/steam/44/x86_64/"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->

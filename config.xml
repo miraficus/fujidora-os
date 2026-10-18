@@ -12,29 +12,28 @@
         <packagemanager>dnf</packagemanager>
     </preferences>
 
-    <!-- REPOZITÁŘE -->
+    <!-- REPOZITÁŘE POUŽÍVAJÍCÍ METALINKY -->
     <repository type="rpm-md" alias="fedora">
-        <source path="https://download.fedoraproject.org/pub/fedora/linux/releases/44/Everything/x86_64/os/"/>
+        <source path="https://mirrors.fedoraproject.org/metalink?repo=fedora-44&amp;arch=x86_64"/>
     </repository>
-    
+
     <repository type="rpm-md" alias="fedora-updates">
-        <source path="https://download.fedoraproject.org/pub/fedora/linux/updates/44/Everything/x86_64/"/>
+        <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f44&amp;arch=x86_64"/>
     </repository>
 
     <repository type="rpm-md" alias="rpmfusion-free">
-        <source path="https://mirrors.rpmfusion.org/free/fedora/releases/44/Everything/x86_64/os/"/>
-    </repository>
-    
-    <repository type="rpm-md" alias="rpmfusion-nonfree">
-        <source path="https://mirrors.rpmfusion.org/nonfree/fedora/releases/44/Everything/x86_64/os/"/>
+        <source path="https://mirrors.rpmfusion.org/metalink?repo=free-fedora-44&amp;arch=x86_64"/>
     </repository>
 
-    <!-- KERNEL CACHYOS COPR -->
+    <repository type="rpm-md" alias="rpmfusion-nonfree">
+        <source path="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-44&amp;arch=x86_64"/>
+    </repository>
+
+    <!-- COPR REPOZITÁŘE (zůstávají přesně tak, jak fungovaly) -->
     <repository type="rpm-md" alias="copr-cachyos">
         <source path="https://download.copr.fedorainfracloud.org/results/bieszczaders/kernel-cachyos/fedora-44-x86_64/"/>
     </repository>
 
-    <!-- REGREET COPR -->
     <repository type="rpm-md" alias="copr-regreet">
         <source path="https://download.copr.fedorainfracloud.org/results/mystical-devil/ReGreet/fedora-44-x86_64/"/>
     </repository>

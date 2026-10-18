@@ -34,6 +34,10 @@
         <source path="https://download1.rpmfusion.org/nonfree/fedora/steam/44/x86_64/"/>
     </repository>
 
+    <repository type="rpm-md" alias="copr-hhd">
+    <source path="https://download.copr.fedorainfracloud.org/results/hhd-dev/hhd/fedora-44-x86_64/"/>
+    </repository>
+
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->
     <packages type="bootstrap">
         <package name="filesystem"/>
@@ -79,7 +83,6 @@
         <package name="steam"/>
         <package name="mangohud"/>
         <package name="gamemode"/>
-        <package name="hhd"/>
         <package name="kitty"/>
         <package name="fastfetch"/>
         <package name="vlc"/>

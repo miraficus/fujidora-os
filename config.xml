@@ -9,7 +9,7 @@
     <preferences>
         <type image="iso"/>
         <version>1.0.0</version>
-        <packagemanager>dnf5</packagemanager>
+        <packagemanager>dnf</packagemanager>
     </preferences>
 
     <!-- REPOZITÁŘE FEDORA 44 -->
@@ -47,6 +47,9 @@
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
         <package name="flatpak"/>
+        
+        <!-- SPRÁVCE BALÍČKŮ -->
+        <package name="dnf"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>

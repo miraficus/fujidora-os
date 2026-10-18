@@ -21,14 +21,6 @@
         <source path="https://dl.fedoraproject.org/pub/fedora/linux/updates/44/Everything/x86_64/"/>
     </repository>
 
-    <repository type="rpm-md" alias="rpmfusion-free">
-        <source path="https://mirrors.rpmfusion.org/free/fedora/development/rawhide/Everything/x86_64/os/"/>
-    </repository>
-    
-    <repository type="rpm-md" alias="rpmfusion-nonfree">
-        <source path="https://mirrors.rpmfusion.org/nonfree/fedora/development/rawhide/Everything/x86_64/os/"/>
-    </repository>
-
     <!-- COPR REPOZITÁŘE (zůstávají přesně tak, jak fungovaly) -->
     <repository type="rpm-md" alias="copr-cachyos">
         <source path="https://download.copr.fedorainfracloud.org/results/bieszczaders/kernel-cachyos/fedora-44-x86_64/"/>
@@ -36,6 +28,11 @@
 
     <repository type="rpm-md" alias="copr-regreet">
         <source path="https://download.copr.fedorainfracloud.org/results/mystical-devil/ReGreet/fedora-44-x86_64/"/>
+    </repository>
+
+    <!-- RPM FUSION STEAM REPOZITÁŘ -->
+    <repository type="rpm-md" alias="rpmfusion-nonfree-steam">
+        <source path="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-steam-44&amp;arch=x86_64"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->

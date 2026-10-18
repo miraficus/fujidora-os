@@ -9,7 +9,7 @@
     <preferences>
         <type image="iso"/>
         <version>1.0.0</version>
-        <packagemanager>dnf</packagemanager>
+        <packagemanager>dnf5</packagemanager>
     </preferences>
 
     <!-- REPOZITÁŘE FEDORA 44 -->
@@ -33,7 +33,7 @@
     <packages type="image">
     <!-- NUTNÉ PRO LIVE ISO -->
         <package name="dracut-kiwi-live"/>
-        
+
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
         <package name="plasma-workspace-wayland"/>

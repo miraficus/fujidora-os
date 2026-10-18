@@ -31,6 +31,9 @@
 
     <!-- BALÍČKY -->
     <packages type="image">
+    <!-- NUTNÉ PRO LIVE ISO -->
+        <package name="dracut-kiwi-live"/>
+        
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
         <package name="plasma-workspace-wayland"/>

@@ -7,8 +7,8 @@
     </description>
     
     <preferences>
-        <type image="iso" flags="hybrid"/>
-        <version>1.4.2</version>
+        <type image="iso"/>
+        <version>1.0.0</version>
         <packagemanager>dnf</packagemanager>
     </preferences>
 

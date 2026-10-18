@@ -46,6 +46,7 @@
         <package name="dnf-plugins-core"/>
         <package name="bash"/>
         <package name="coreutils"/>
+        <package name="e2fsprogs"/>
     </packages>
 
     <!-- BALÍČKY -->
@@ -107,5 +108,14 @@
         <package name="kcalc"/>
         <package name="kde-connect"/>
         <package name="kolourpaint"/>
+
+        <!-- Podpora souborových systémů pro USB disky a formátování -->
+        <package name="btrfs-progs"/>
+        <package name="dosfstools"/>
+        <package name="exfatprogs"/>
+        <package name="ntfs-3g"/>
+        <package name="e2fsprogs"/>
+        <package name="xfsprogs"/>
+        <package name="kpartx"/>
     </packages>
 </image>

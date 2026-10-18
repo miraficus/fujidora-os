@@ -52,7 +52,6 @@
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
         <package name="plasma-workspace-wayland"/>
-        <package name="kf6-frameworks"/>
         <package name="dolphin"/>
         <package name="kscreen"/>
         <package name="plasma-nm"/>
@@ -62,11 +61,13 @@
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
         <package name="flatpak"/>
+        <package name="sddm"/>
+        <package name="sddm-kcm"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>
         <package name="greetd"/>
-        <package name="regreet"/>
+        <package name="ReGreet"/>
         <package name="cage"/>
         <package name="greetd-selinux"/>
         
@@ -98,6 +99,5 @@
         <package name="ark"/>
         <package name="spectacle"/>
         <package name="kamoso"/>
-        <package name="kora-icon-theme"/>
     </packages>
 </image>

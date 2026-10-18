@@ -52,5 +52,5 @@ flatpak install -y flathub it.mijorus.gearlever
 flatpak install -y flathub com.github.Matoking.protontricks
 flatpak install -y flathub one.ablaze.floorp
 flatpak install -y flathub net.lutris.Lutris
-flatpak install -y flathub com.github.theevilskeleton.ProtonPlus
+flatpak install -y flathub com.vysp3r.ProtonPlus
 flatpak install -y flathub com.vscodium.codium

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image name="fujidora" profile="live">
+    <description type="system">
+        <author>Miraficus</author>
+        <contact>vas@email.cz</contact>
+        <specification>Fujidora - Herní distribuce s KDE Plasma (Fedora 44)</specification>
+    </description>
+    
+    <preferences>
+        <type image="iso" format="iso" hybrid="true"/>
+        <version>1.4.2</version>
+        <packagemanager>dnf</packagemanager>
+        <locale>cs_CZ.UTF-8</locale>
+        <keymap>cz</keymap>
+    </preferences>
+
+    <!-- REPOZITÁŘE FEDORA 44 -->
+    <repository type="rpm-md" alias="fedora">
+        <source path="https://fedoraproject.org"/>
+    </repository>
+    <repository type="rpm-md" alias="fedora-updates">
+        <source path="https://fedoraproject.org"/>
+    </repository>
+    <repository type="rpm-md" alias="rpmfusion-free">
+        <source path="https://rpmfusion.org"/>
+    </repository>
+    <repository type="rpm-md" alias="rpmfusion-nonfree">
+        <source path="https://rpmfusion.org"/>
+    </repository>
+    <repository type="rpm-md" alias="copr-cachyos">
+        <source path="https://fedorainfracloud.org"/>
+    </repository>
+
+    <!-- BALÍČKY -->
+    <packages type="image">
+        <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
+        <package name="plasma-desktop"/>
+        <package name="plasma-workspace-wayland"/>
+        <package name="kf6-frameworks"/>
+        <package name="dolphin"/>
+        <package name="kscreen"/>
+        <package name="plasma-nm"/>
+        <package name="plasma-pa"/>
+        <package name="power-profiles-daemon"/>
+        <package name="wireplumber"/>
+        <package name="pipewire-alsa"/>
+        <package name="pipewire-pulseaudio"/>
+        <package name="flatpak"/> <!-- Nutné pro instalaci herních launcherů -->
+        
+        <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
+        <package name="calamares"/>
+        <package name="greetd"/>
+        <package name="regreet"/>
+        <package name="cage"/>
+        <package name="greetd-selinux"/>
+        
+        <!-- JÁDRO CACHYOS -->
+        <package name="kernel-cachyos"/>
+        <package name="kernel-cachyos-devel-matched"/>
+        
+        <!-- NATIVNÍ HERNÍ UTILITY A APLIKACE Z VAŠEHO SEZNAMU -->
+        <package name="steam"/> <!-- Nativní RPM verze pro SteamVR -->
+        <package name="mangohud"/>
+        <package name="gamemode"/>
+        <package name="hhd"/>
+        <package name="kitty"/>
+        <package name="fastfetch"/>
+        <package name="vlc"/>
+        <package name="conky"/>
+        <package name="filezilla"/>
+        <package name="openrgb"/>
+        <package name="piper"/> <!-- Nastavení herních myší -->
+        <package name="gparted"/>
+        
+        <!-- KDE DESKTOP APLIKACE Z VAŠEHO SEZNAMU -->
+        <package name="plasma-discover"/> <!-- Discover Store -->
+        <package name="gwenview"/>        <!-- Prohlížeč obrázků -->
+        <package name="ark"/>             <!-- Rozbalování archívů (ZIP, RAR, TAR) -->
+        <package name="spectacle"/>       <!-- Snímky obrazovky -->
+        <package name="kamoso"/>          <!-- Webkamera -->
+        <package name="kora-icon-theme"/> <!-- Váš oblíbený icon pack obsažený přímo ve Fedoře -->
+    </packages>
+</image>

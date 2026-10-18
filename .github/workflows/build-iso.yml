@@ -22,10 +22,16 @@ jobs:
 
       - name: Instalace KIWI buildovacích nástrojů
         run: |
-          dnf install -y kiwi python3-kiwi dnf5 git dnf-plugins-core e2fsprogs btrfs-progs dosfstools xfsprogs
-          # Zajištění, že mkfs.ext4 je dostupné na všech očekávaných cestách v PATH
+          dnf install -y kiwi python3-kiwi dnf git dnf-plugins-core \
+            e2fsprogs e2fsprogs-extra btrfs-progs dosfstools xfsprogs \
+            squashfs-tools xorriso genisoimage
+          
+          # Zajištění symlinků pro jistotu na obvyklých cestách
           ln -sf $(which mkfs.ext4) /usr/bin/mkfs.ext4 || true
           ln -sf $(which mkfs.ext4) /sbin/mkfs.ext4 || true
+          ln -sf $(which mksquashfs) /usr/bin/mksquashfs || true
+          ln -sf $(which mksquashfs) /sbin/mksquashfs || true
+          
           dnf clean all
 
       - name: Sestavení ISO obrazu (KIWI-ng)

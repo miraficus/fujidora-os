@@ -103,7 +103,7 @@
         <package name="spectacle"/>
         <package name="kamoso"/>
         <package name="kcalc"/>
-        <package name="kdeconnect"/>
+        <package name="kde-connect"/>
         <package name="kolourpaint"/>
     </packages>
 </image>

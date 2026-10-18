@@ -12,21 +12,31 @@
         <packagemanager>dnf</packagemanager>
     </preferences>
 
-    <!-- REPOZITÁŘE FEDORA 44 -->
+    <!-- REPOZITÁŘE -->
     <repository type="rpm-md" alias="fedora">
-        <source path="https://fedoraproject.org"/>
+        <source path="https://download.fedoraproject.org/pub/fedora/linux/releases/44/Everything/x86_64/os/"/>
     </repository>
+    
     <repository type="rpm-md" alias="fedora-updates">
-        <source path="https://fedoraproject.org"/>
+        <source path="https://download.fedoraproject.org/pub/fedora/linux/updates/44/Everything/x86_64/"/>
     </repository>
+
     <repository type="rpm-md" alias="rpmfusion-free">
-        <source path="https://rpmfusion.org"/>
+        <source path="https://download.rpmfusion.org/free/fedora/releases/44/Everything/x86_64/os/"/>
     </repository>
+    
     <repository type="rpm-md" alias="rpmfusion-nonfree">
-        <source path="https://rpmfusion.org"/>
+        <source path="https://download.rpmfusion.org/nonfree/fedora/releases/44/Everything/x86_64/os/"/>
     </repository>
+
+    <!-- KERNEL CACHYOS COPR -->
     <repository type="rpm-md" alias="copr-cachyos">
-        <source path="https://fedorainfracloud.org"/>
+        <source path="https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-44/copr.fedorainfracloud.org:bieszczaders:kernel-cachyos.repo"/>
+    </repository>
+
+    <!-- REGREET COPR (Nutné pro přihlašovací obrazovku) -->
+    <repository type="rpm-md" alias="copr-regreet">
+        <source path="https://copr.fedorainfracloud.org/coprs/mystical-devil/ReGreet/repo/fedora-44/copr.fedorainfracloud.org:mystical-devil:ReGreet.repo"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->

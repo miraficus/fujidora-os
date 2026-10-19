@@ -6,12 +6,12 @@
         <specification>Fujidora - Herní distribuce s KDE Plasma (Fedora 44)</specification>
     </description>
     
-    <preferences>
-        <type image="iso" primary="true" filesystem="squashfs" boot="kiwi/netboot">
-        <bootloader name="grub2"/>
-        <version>1.0.0</version>
-        <packagemanager>dnf</packagemanager>
+<preferences>
+        <type image="iso" primary="true" filesystem="squashfs">
+            <bootloader name="grub2"/>
+            <packagemanager>dnf</packagemanager>
         </type>
+        <version>1.0.0</version>
     </preferences>
 
     <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->

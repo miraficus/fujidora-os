@@ -1,0 +1,47 @@
+name: Build Fujidora F44 ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    container:
+      image: fedora:44
+      options: --privileged
+
+    steps:
+      - name: Stáhnutí zdrojového kódu z GitHubu
+        uses: actions/checkout@v4
+
+      - name: Instalace KIWI buildovacích nástrojů
+        run: |
+          dnf install -y kiwi python3-kiwi git dnf-plugins-core \
+            e2fsprogs btrfs-progs dosfstools xfsprogs \
+            squashfs-tools xorriso genisoimage
+          
+          # Zajištění symlinků pro jistotu na obvyklých cestách
+          ln -sf $(which mkfs.ext4) /usr/bin/mkfs.ext4 || true
+          ln -sf $(which mkfs.ext4) /sbin/mkfs.ext4 || true
+          ln -sf $(which mksquashfs) /usr/bin/mksquashfs || true
+          ln -sf $(which mksquashfs) /sbin/mksquashfs || true
+          
+          dnf clean all
+
+      - name: Sestavení ISO obrazu (KIWI-ng)
+        run: |
+          mkdir -p /tmp/fujidora_output
+          kiwi-ng system build --description ./ --target-dir /tmp/fujidora_output
+
+      - name: Uložení ISO jako GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Fujidora-Live-ISO
+          path: /tmp/fujidora_output/*.iso
+          retention-days: 30

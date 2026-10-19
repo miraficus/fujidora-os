@@ -11,6 +11,7 @@
         <bootloader name="grub2"/>
         <version>1.0.0</version>
         <packagemanager>dnf</packagemanager>
+        </type>
     </preferences>
 
     <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->

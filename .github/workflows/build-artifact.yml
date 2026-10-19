@@ -1,4 +1,4 @@
-name: Build Fujidora F44 ISO
+name: Build Fujidora F44 Artifact
 
 on:
   push:

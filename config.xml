@@ -5,8 +5,6 @@
         <contact>vas@email.cz</contact>
         <specification>Fujidora - Herní distribuce s KDE Plasma (Fedora 44)</specification>
     </description>
-
-    <user name="liveuser" groups="wheel" password=""/>
     
     <preferences>
         <type image="iso" primary="true" flags="dmsquash" filesystem="squashfs">
@@ -15,6 +13,10 @@
         </type>
         <version>1.0.0</version>
     </preferences>
+
+    <users>
+        <user name="liveuser" groups="wheel" password=""/>
+    </users>
 
     <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->
     <repository type="rpm-md" alias="fedora">

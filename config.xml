@@ -5,9 +5,11 @@
         <contact>vas@email.cz</contact>
         <specification>Fujidora - Herní distribuce s KDE Plasma (Fedora 44)</specification>
     </description>
+
+    <user name="liveuser" groups="wheel" password=""/>
     
-<preferences>
-        <type image="iso" primary="true" filesystem="squashfs">
+    <preferences>
+        <type image="iso" primary="true" flags="dmsquash" filesystem="squashfs">
             <bootloader name="grub2"/>
             <packagemanager>dnf</packagemanager>
         </type>

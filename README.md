@@ -8,7 +8,6 @@ It is tailored specifically for my desktop PC and handheld devices (such as the 
 * **Base**: Fedora 44 (featuring CachyOS kernel).
 * **Desktop**: KDE Plasma (Wayland) with a clean, verbose text-based boot sequence (no Plymouth).
 * **Display Manager**: ReGreet / SDDM.
-* **Storage & Filesystems**: Full native support for Btrfs, NTFS, exFAT, and FAT32.
 * **Pre-installed Gaming & Utilities (Flatpaks)**:
   * Steam, Lutris, Heroic Games Launcher, Prism Launcher, Bottles
   * Discord, Floorp, VSCodium, ProtonPlus, Protontricks, Gear Lever
@@ -16,3 +15,11 @@ It is tailored specifically for my desktop PC and handheld devices (such as the 
 
 ## Status
 🛠️ **Personal Use Only.** This is an experimental, custom-built distribution for my own hardware. There is no official support or guarantee of stability.
+
+
+## Links
+### Themes
+
+[Monochrome Collection](https://store.kde.org/c/1361201)
+[Monochrome KDE Theme](https://store.kde.org/p/2143824)
+[Kora Grey Icon Pack](https://store.kde.org/p/1256209)

@@ -7,7 +7,8 @@
     </description>
     
     <preferences>
-        <type image="iso"/>
+        <type image="iso" primary="true" filesystem="squashfs" boot="kiwi/netboot">
+        <bootloader name="grub2"/>
         <version>1.0.0</version>
         <packagemanager>dnf</packagemanager>
     </preferences>
@@ -38,6 +39,10 @@
     <source path="https://download.copr.fedorainfracloud.org/results/hhd-dev/hhd/fedora-44-x86_64/"/>
     </repository>
 
+    <repository type="rpm-md" alias="vscodium">
+    <source path="https://gitlab.com/paulcarroty/vscodium-rpm-repo/-/raw/rawhide/"/>
+    </repository>
+
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->
     <packages type="bootstrap">
         <package name="filesystem"/>
@@ -53,6 +58,7 @@
     <packages type="image">
     <!-- NUTNÉ PRO LIVE ISO -->
         <package name="dracut-kiwi-live"/>
+        <package name="squashfs-tools"/>
 
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
@@ -98,6 +104,8 @@
         <package name="nano"/>
         <package name="thunderbird"/>
         <package name="qbittorrent"/>
+        <package name="lutris"/>
+        <package name="codium"/>
         
         <!-- KDE DESKTOP APLIKACE -->
         <package name="plasma-discover"/>

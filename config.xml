@@ -67,6 +67,10 @@
         <package name="dbus-daemon"/>
         <package name="systemd-pam"/>
         <package name="glibc-langpack-cs"/>
+        <package name="openssh-server"/>
+        <package name="sudo"/>
+        <package name="fedora-repos"/>
+        <package name="fedora-release-common"/>
 
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
@@ -117,6 +121,11 @@
         
         <!-- KDE DESKTOP APLIKACE -->
         <package name="plasma-discover"/>
+        <package name="plasma-discover-packagekit"/>
+        <package name="plasma-discover-flatpak"/>
+        <package name="kvantum"/>
+        <package name="aurorae"/>
+        <package name="curl-minimal"/>
         <package name="gwenview"/>
         <package name="ark"/>
         <package name="spectacle"/>

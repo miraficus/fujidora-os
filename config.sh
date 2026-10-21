@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# Jeden aktivní správce přihlášení; live autologin doplňuje systemd generátor.
+systemctl disable sddm.service
+systemctl enable --force greetd.service
+systemctl set-default graphical.target
+
 # Obnova ikona keše pro předpřipravené ikony v /usr/share/icons
 gtk-update-icon-cache /usr/share/icons/kora-grey || true
 

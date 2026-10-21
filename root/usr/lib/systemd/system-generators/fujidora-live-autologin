@@ -1,0 +1,35 @@
+#!/bin/sh
+set -eu
+
+# Autologin patří jen do live systému, nikoli do initrd nebo instalace na disk.
+[ "${SYSTEMD_IN_INITRD:-0}" != 1 ] || exit 0
+[ -f /etc/greetd/config.toml ] || exit 0
+cmdline=" $(cat /proc/cmdline) "
+case "$cmdline" in
+    *" rd.live.image "*) ;;
+    *) exit 0 ;;
+esac
+case "$cmdline" in
+    *" root=live:"*) ;;
+    *) exit 0 ;;
+esac
+
+output_dir=${1:?Missing systemd generator output directory}
+mkdir -p "$output_dir/greetd.service.d"
+# Vše vzniká v runtime adresáři generátoru a nepřenese se do instalace.
+cat /etc/greetd/config.toml > "$output_dir/fujidora-greetd.toml"
+cat >> "$output_dir/fujidora-greetd.toml" <<'EOF'
+
+[initial_session]
+command = "/usr/bin/dbus-run-session /usr/bin/startplasma-wayland"
+user = "liveuser"
+EOF
+
+cat > "$output_dir/greetd.service.d/50-live-autologin.conf" <<EOF
+[Unit]
+Conflicts=getty@tty1.service
+
+[Service]
+ExecStart=
+ExecStart=/usr/bin/greetd --config "$output_dir/fujidora-greetd.toml"
+EOF

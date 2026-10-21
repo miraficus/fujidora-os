@@ -15,7 +15,7 @@
     </preferences>
 
     <users>
-        <user name="liveuser" groups="wheel" password=""/>
+        <user name="liveuser" groups="liveuser,wheel" home="/home/liveuser" shell="/bin/bash" password="live" pwdformat="plain"/>
     </users>
 
     <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->
@@ -64,6 +64,7 @@
     <!-- NUTNÉ PRO LIVE ISO -->
         <package name="dracut-kiwi-live"/>
         <package name="squashfs-tools"/>
+        <package name="dbus-daemon"/>
 
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>

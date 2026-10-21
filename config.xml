@@ -65,6 +65,8 @@
         <package name="dracut-kiwi-live"/>
         <package name="squashfs-tools"/>
         <package name="dbus-daemon"/>
+        <package name="systemd-pam"/>
+        <package name="glibc-langpack-cs"/>
 
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>

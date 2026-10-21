@@ -4,6 +4,7 @@ set -euo pipefail
 # Motivy jsou verzované přímo zde; sestavení nic nestahuje ani nepřepisuje.
 overlay_dir=${1:-root}
 required_files=(
+    usr/share/icons/hicolor/scalable/apps/fujidora.svg
     usr/share/color-schemes/Monochrome.colors
     usr/share/plasma/look-and-feel/Monochrome/metadata.json
     usr/share/plasma/desktoptheme/Monochrome/metadata.json

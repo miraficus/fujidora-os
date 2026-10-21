@@ -84,6 +84,7 @@
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
         <package name="flatpak"/>
+        <package name="flatseal"/>
         <package name="sddm"/>
         <package name="sddm-kcm"/>
         <package name="jetbrains-mono-fonts-all"/>
@@ -127,6 +128,7 @@
         <package name="aurorae"/>
         <package name="curl-minimal"/>
         <package name="gwenview"/>
+        <package name="okular"/>
         <package name="ark"/>
         <package name="spectacle"/>
         <package name="kamoso"/>

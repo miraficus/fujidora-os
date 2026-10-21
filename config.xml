@@ -7,11 +7,11 @@
     </description>
     
     <preferences>
-        <type image="iso" primary="true" flags="dmsquash" filesystem="squashfs">
+        <type image="iso" primary="true" flags="overlay" filesystem="squashfs">
             <bootloader name="grub2"/>
-            <packagemanager>dnf</packagemanager>
         </type>
         <version>1.0.0</version>
+        <packagemanager>dnf</packagemanager>
     </preferences>
 
     <users>

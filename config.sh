@@ -48,7 +48,6 @@ cat << 'EOF' > /etc/skel/.config/Kvantum/kvantum.kvconfig
 theme=Monochrome
 EOF
 
-cp /etc/xdg/conky/conky.conf /etc/skel/.config/conky/conky.conf
 cat << 'EOF' > /etc/skel/.config/autostart/fujidora-conky.desktop
 [Desktop Entry]
 Type=Application

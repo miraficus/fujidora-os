@@ -28,8 +28,8 @@ jobs:
           
           dnf clean all
 
-      - name: Doplnění součástí motivu Monochrome
-        run: bash scripts/prepare-theme.sh
+      - name: Kontrola lokálních součástí motivu Monochrome
+        run: bash scripts/check-theme.sh
 
       - name: Validace konfigurace KIWI
         run: kiwi-ng --debug image info --description ./ --print-xml

@@ -45,7 +45,7 @@
     </repository>
 
     <repository type="rpm-md" alias="vscodium">
-    <source path="https://gitlab.com/paulcarroty/vscodium-rpm-repo/-/raw/rawhide/"/>
+    <source path="https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->

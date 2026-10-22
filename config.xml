@@ -91,6 +91,7 @@
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>
+        <package name="kdialog"/>
         <package name="greetd"/>
         <package name="ReGreet"/>
         <package name="cage"/>

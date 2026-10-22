@@ -13,5 +13,5 @@ case "$cmdline" in
     *) exit 0 ;;
 esac
 
-# Použij standardní desktopový spouštěč Fedory včetně zvýšení oprávnění.
-exec /usr/bin/gio launch /usr/share/applications/calamares.desktop
+# Použij stejný spouštěč při automatickém i ručním otevření instalátoru.
+exec /usr/local/bin/fujidora-installer

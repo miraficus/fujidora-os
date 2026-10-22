@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Install Fujidora
+Name[cs]=Nainstalovat Fujidoru
+Comment=Install the system on a disk
+Comment[cs]=Nainstalovat systém na disk
+Exec=/usr/local/bin/fujidora-installer
+TryExec=/usr/bin/calamares
+Icon=/usr/share/icons/hicolor/scalable/apps/fujidora.svg
+Terminal=false
+Categories=Qt;KDE;System;
+StartupNotify=true

@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+# sudo ověřuje přihlášeného uživatele, stejně jako spuštění z terminálu.
+if [ "$(id -u)" -eq 0 ]; then
+    exec /usr/bin/calamares
+fi
+export SUDO_ASKPASS=/usr/local/bin/fujidora-installer-askpass
+exec /usr/bin/sudo -A -p 'Heslo uživatele %u pro spuštění instalátoru:' -- /usr/bin/calamares

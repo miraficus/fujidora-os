@@ -25,6 +25,12 @@ It is tailored specifically for my desktop PC and handheld devices (such as the 
 [Kora Grey Icon Pack](https://store.kde.org/p/1256209)
 
 
+## ISO finalization
+
+After KIWI builds the image, both workflows run `python3 scripts/pad-iso.py /tmp/fujidora_output/*.iso` before uploading it. This ensures at least 300 KiB of readable trailing space beyond the ISO 9660 volume and writes a matching `.iso.sha256` checksum. The operation is idempotent and rejects truncated images.
+
+The original image placed the kernel at the very end of an unpadded ISO. A reconstructed diagnostic image reproduced an incorrect GRUB file hash and a triple fault at kernel entry; adding the padding restored the correct hash and let the kernel initialize. The padding does not change files inside the ISO. For a manual local KIWI build, run the same script before distributing the image.
+
 ## Desktop assets
 
 Theme files are stored in this repository and can be edited directly. The build only runs `bash scripts/check-theme.sh`; it does not download or overwrite Monochrome assets.

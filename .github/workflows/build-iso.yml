@@ -39,6 +39,9 @@ jobs:
           mkdir -p /tmp/fujidora_output
           kiwi-ng --debug --logfile /tmp/fujidora-build.log system build --description ./ --target-dir /tmp/fujidora_output
 
+      - name: Ochranná výplň konce ISO a kontrolní součet
+        run: python3 scripts/pad-iso.py /tmp/fujidora_output/*.iso
+
       - name: Uložení diagnostického logu
         if: always()
         uses: actions/upload-artifact@v4
@@ -55,6 +58,8 @@ jobs:
           name: Fujidora Release ${{ github.ref_name }}
           draft: false
           prerelease: false
-          files: /tmp/fujidora_output/*.iso
+          files: |
+            /tmp/fujidora_output/*.iso
+            /tmp/fujidora_output/*.iso.sha256
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -33,6 +33,9 @@ cat > "$output_dir/greetd.service.d/50-live-autologin.conf" <<EOF
 Conflicts=getty@tty1.service
 
 [Service]
+# Generovaný TOML není systemd jednotka: greetd ho musí smět číst i se SELinuxem.
+# Označení obnov při každém startu, také po opětovném spuštění generátorů.
+ExecStartPre=/usr/bin/chcon --reference=/etc/greetd/config.toml "$output_dir/fujidora-greetd.toml"
 ExecStart=
 ExecStart=/usr/bin/greetd --config "$output_dir/fujidora-greetd.toml"
 EOF

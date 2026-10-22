@@ -39,10 +39,14 @@ Theme files are stored in this repository and can be edited directly. The build 
 | Conky | `root/etc/skel/.config/conky/conky.conf` |
 | Kitty | `root/etc/skel/.config/kitty/kitty.conf` |
 | Fuji wallpaper | `root/usr/share/backgrounds/fuji/default/fuji.jpg` |
+| Plasma keyboard layout | `root/etc/skel/.config/kxkbrc` |
+| Calamares branding | `root/etc/calamares/branding/fujidora/branding.desc` |
 
 Monochrome originates from [pwyde/monochrome-kde](https://github.com/pwyde/monochrome-kde). The bundled Plasma desktop component was copied from commit `1c9983e8d1384ec2d9ff0fac59c5265fc74d0e6b`; its license and authorship files are included.
 
 `config.sh` copies the completed `/etc/skel/.config` into the existing liveuser account, because KIWI creates that user before running the script. New users receive the same defaults from `/etc/skel`.
+
+The default terminal is Kitty (`TerminalApplication` and `TerminalService` in `kdeglobals`), including applications launched with `Terminal=true`. Plasma defaults to the Czech keyboard layout through `kxkbrc`; this is separate from the console keymap and ReGreet layout. Calamares uses the `fujidora` branding component, reusing the bundled launcher SVG and Fuji wallpaper. This supplies the missing startup branding; disk installation still requires an end-to-end VM test.
 
 Plasma's one-time update scripts in `root/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/` set the Fujidora launcher icon and Fuji wallpaper after the initial layout is created. Subsequent logins preserve the user's choices. ReGreet uses the same bundled wallpaper independently.
 

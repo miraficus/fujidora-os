@@ -15,6 +15,8 @@ required_files=(
     etc/skel/.config/Kvantum/Monochrome/Monochrome.svg
     etc/skel/.config/conky/conky.conf
     etc/skel/.config/kitty/kitty.conf
+    etc/skel/.config/kxkbrc
+    etc/calamares/branding/fujidora/branding.desc
 )
 for relative_path in "${required_files[@]}"; do
     if [[ ! -s "$overlay_dir/$relative_path" ]]; then

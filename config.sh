@@ -15,6 +15,8 @@ mkdir -p /etc/skel/.config
 cat << 'EOF' > /etc/skel/.config/kdeglobals
 [General]
 ColorScheme=Monochrome
+TerminalApplication=kitty
+TerminalService=kitty.desktop
 XftHintStyle=hintslight
 XftSubPixel=rgb
 

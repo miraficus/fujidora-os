@@ -54,6 +54,12 @@ Monochrome originates from [pwyde/monochrome-kde](https://github.com/pwyde/monoc
 
 The default terminal is Kitty (`TerminalApplication` and `TerminalService` in `kdeglobals`), including applications launched with `Terminal=true`. Plasma defaults to the Czech keyboard layout through `kxkbrc`; this is separate from the console keymap and ReGreet layout. Calamares uses the `fujidora` branding component, reusing the bundled launcher SVG and Fuji wallpaper. This supplies the missing startup branding; disk installation still requires an end-to-end VM test.
 
+KDE defaults to JetBrains Mono at 10 pt for general text, menus, toolbars, window titles and fixed-width text; the small-text font is 8 pt. The existing JetBrains Mono package supplies the font, while other installed fonts remain available for fallback glyphs.
+
+The Games menu includes ProtonDB and Are We Anti-Cheat Yet? launchers, which open their sites in the default browser through `xdg-open`.
+
+Calamares opens automatically when `liveuser` logs into live Plasma. Its autostart helper requires both `rd.live.image` and `root=live:` in the boot command line, so installed-system logins do not launch it. It uses Fedora's packaged `calamares.desktop` through `gio launch`, preserving the distribution's privilege handling. `kdesurc` selects sudo so an authentication prompt uses the current user's password (`live` for liveuser), rather than requiring a separate root password. Opening the installer does not start an installation; the user still chooses the target and confirms installation in Calamares.
+
 Plasma's one-time update scripts in `root/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/` set the Fujidora launcher icon and Fuji wallpaper after the initial layout is created. Subsequent logins preserve the user's choices. ReGreet uses the same bundled wallpaper independently.
 
 On live boots, the autologin generator creates a runtime-only greetd configuration. Before greetd starts, `ExecStartPre` copies the SELinux label from `/etc/greetd/config.toml` onto that generated file. This lets greetd read it with SELinux enforcing, including after generator reruns; normal installed-system boots do not receive the override.

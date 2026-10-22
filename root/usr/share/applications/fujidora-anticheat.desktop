@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Are We Anti-Cheat Yet?
+GenericName=Anti-Cheat Compatibility
+GenericName[cs]=Kompatibilita anti-cheatu
+Comment=Check anti-cheat compatibility with Linux and Proton
+Comment[cs]=Ověřit kompatibilitu anti-cheatu her s Linuxem a Protonem
+Exec=xdg-open https://areweanticheatyet.com/
+TryExec=xdg-open
+Icon=security-high
+Categories=Game;
+Keywords=Steam;Proton;Wine;Linux;anti-cheat;compatibility;kompatibilita;
+Terminal=false
+StartupNotify=false

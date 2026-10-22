@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Install Fujidora
+Name[cs]=Nainstalovat Fujidoru
+Comment=Open the installer in the live Plasma session
+Comment[cs]=Otevřít instalátor v live relaci Plasmy
+Exec=/usr/local/bin/fujidora-live-installer
+TryExec=/usr/bin/calamares
+Icon=/usr/share/icons/hicolor/scalable/apps/fujidora.svg
+OnlyShowIn=KDE;
+Terminal=false
+StartupNotify=false

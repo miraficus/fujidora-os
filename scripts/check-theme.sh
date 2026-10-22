@@ -17,6 +17,11 @@ required_files=(
     etc/skel/.config/kitty/kitty.conf
     etc/skel/.config/kxkbrc
     etc/calamares/branding/fujidora/branding.desc
+    etc/skel/.config/autostart/fujidora-live-installer.desktop
+    etc/skel/.config/kdesurc
+    usr/local/bin/fujidora-live-installer
+    usr/share/applications/fujidora-protondb.desktop
+    usr/share/applications/fujidora-anticheat.desktop
 )
 for relative_path in "${required_files[@]}"; do
     if [[ ! -s "$overlay_dir/$relative_path" ]]; then
@@ -24,4 +29,8 @@ for relative_path in "${required_files[@]}"; do
         exit 1
     fi
 done
+if [[ ! -x "$overlay_dir/usr/local/bin/fujidora-live-installer" ]]; then
+    echo "Live spouštěč instalátoru není spustitelný." >&2
+    exit 1
+fi
 echo "Lokální součásti Monochrome, Conky a Kitty jsou připravené."

@@ -15,6 +15,11 @@ mkdir -p /etc/skel/.config
 cat << 'EOF' > /etc/skel/.config/kdeglobals
 [General]
 ColorScheme=Monochrome
+font=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+fixed=JetBrains Mono,10,-1,5,50,0,0,0,1,0
+smallestReadableFont=JetBrains Mono,8,-1,5,50,0,0,0,0,0
+toolBarFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+menuFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
 TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftHintStyle=hintslight
@@ -26,6 +31,9 @@ Theme=kora-grey
 [KDE]
 LookAndFeelPackage=Monochrome
 widgetStyle=kvantum
+
+[WM]
+activeFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
 EOF
 
 cat << 'EOF' > /etc/skel/.config/kservicerc

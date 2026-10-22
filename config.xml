@@ -106,6 +106,7 @@
         <package name="mangohud"/>
         <package name="gamemode"/>
         <package name="kitty"/>
+        <package name="xdg-utils"/>
         <package name="fastfetch"/>
         <package name="vlc"/>
         <package name="conky"/>

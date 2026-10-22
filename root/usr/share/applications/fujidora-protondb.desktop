@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=ProtonDB
+GenericName=Game Compatibility
+GenericName[cs]=Kompatibilita her
+Comment=Check community reports on games running with Proton
+Comment[cs]=Ověřit zkušenosti hráčů se spouštěním her přes Proton
+Exec=xdg-open https://www.protondb.com/
+TryExec=xdg-open
+Icon=applications-games
+Categories=Game;
+Keywords=Steam;Proton;Wine;Linux;compatibility;kompatibilita;
+Terminal=false
+StartupNotify=false

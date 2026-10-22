@@ -1,0 +1,32 @@
+---
+componentName: fujidora
+welcomeStyleCalamares: false
+windowExpanding: normal
+windowPlacement: center
+
+strings:
+  productName: Fujidora
+  shortProductName: Fujidora
+  version: "1.0.0"
+  shortVersion: "1.0"
+  versionedName: Fujidora 1.0.0
+  shortVersionedName: Fujidora 1.0
+  bootloaderEntryName: Fujidora
+  productUrl: https://github.com/miraficus/fujidora-os
+  supportUrl: https://github.com/miraficus/fujidora-os/issues
+  knownIssuesUrl: https://github.com/miraficus/fujidora-os/issues
+
+# Použij stejné soubory jako plocha, bez dalších kopií nebo stahování.
+images:
+  productIcon: /usr/share/icons/hicolor/scalable/apps/fujidora.svg
+  productLogo: /usr/share/icons/hicolor/scalable/apps/fujidora.svg
+  productWelcome: /usr/share/icons/hicolor/scalable/apps/fujidora.svg
+
+style:
+  SidebarBackground: "#171717"
+  SidebarText: "#eeeeee"
+  SidebarBackgroundCurrent: "#454545"
+  SidebarTextCurrent: "#ffffff"
+
+slideshow:
+  - /usr/share/backgrounds/fuji/default/fuji.jpg

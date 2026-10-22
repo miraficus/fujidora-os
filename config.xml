@@ -7,15 +7,15 @@
     </description>
     
     <preferences>
-        <type image="iso" primary="true" flags="dmsquash" filesystem="squashfs">
+        <type image="iso" primary="true" flags="overlay" filesystem="squashfs">
             <bootloader name="grub2"/>
-            <packagemanager>dnf</packagemanager>
         </type>
         <version>1.0.0</version>
+        <packagemanager>dnf</packagemanager>
     </preferences>
 
     <users>
-        <user name="liveuser" groups="wheel" password=""/>
+        <user name="liveuser" groups="liveuser,wheel" home="/home/liveuser" shell="/bin/bash" password="live" pwdformat="plain"/>
     </users>
 
     <!-- PŘÍMÁ ZRCADLA PRO FEDORU 44 -->
@@ -45,7 +45,7 @@
     </repository>
 
     <repository type="rpm-md" alias="vscodium">
-    <source path="https://gitlab.com/paulcarroty/vscodium-rpm-repo/-/raw/rawhide/"/>
+    <source path="https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/"/>
     </repository>
 
 <!-- ZDE PŘIDEJTE BOOTSTRAP -->
@@ -64,6 +64,13 @@
     <!-- NUTNÉ PRO LIVE ISO -->
         <package name="dracut-kiwi-live"/>
         <package name="squashfs-tools"/>
+        <package name="dbus-daemon"/>
+        <package name="systemd-pam"/>
+        <package name="glibc-langpack-cs"/>
+        <package name="openssh-server"/>
+        <package name="sudo"/>
+        <package name="fedora-repos"/>
+        <package name="fedora-release-common"/>
 
         <!-- ZÁKLAD SYSTÉMU (Čisté KDE) -->
         <package name="plasma-desktop"/>
@@ -77,12 +84,14 @@
         <package name="pipewire-alsa"/>
         <package name="pipewire-pulseaudio"/>
         <package name="flatpak"/>
+        <package name="flatseal"/>
         <package name="sddm"/>
         <package name="sddm-kcm"/>
         <package name="jetbrains-mono-fonts-all"/>
         
         <!-- INSTALÁTOR A DISPLEJ MANAŽER -->
         <package name="calamares"/>
+        <package name="kdialog"/>
         <package name="greetd"/>
         <package name="ReGreet"/>
         <package name="cage"/>
@@ -98,6 +107,7 @@
         <package name="mangohud"/>
         <package name="gamemode"/>
         <package name="kitty"/>
+        <package name="xdg-utils"/>
         <package name="fastfetch"/>
         <package name="vlc"/>
         <package name="conky"/>
@@ -114,7 +124,13 @@
         
         <!-- KDE DESKTOP APLIKACE -->
         <package name="plasma-discover"/>
+        <package name="plasma-discover-packagekit"/>
+        <package name="plasma-discover-flatpak"/>
+        <package name="kvantum"/>
+        <package name="aurorae"/>
+        <package name="curl-minimal"/>
         <package name="gwenview"/>
+        <package name="okular"/>
         <package name="ark"/>
         <package name="spectacle"/>
         <package name="kamoso"/>

@@ -15,7 +15,7 @@ ToolButtonStyle=NoText
 ToolButtonStyleOtherToolbars=NoText
 
 [kdeglobals][Icons]
-Theme=Papirus-Dark
+Theme=kora-grey
 
 [plasmarc][Theme]
 name=Monochrome

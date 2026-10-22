@@ -1,0 +1,41 @@
+#!/bin/sh
+set -eu
+
+# Autologin patří jen do live systému, nikoli do initrd nebo instalace na disk.
+[ "${SYSTEMD_IN_INITRD:-0}" != 1 ] || exit 0
+[ -f /etc/greetd/config.toml ] || exit 0
+cmdline=" $(cat /proc/cmdline) "
+case "$cmdline" in
+    *" rd.live.image "*) ;;
+    *) exit 0 ;;
+esac
+case "$cmdline" in
+    *" root=live:"*) ;;
+    *) exit 0 ;;
+esac
+
+output_dir=${1:?Missing systemd generator output directory}
+mkdir -p "$output_dir/greetd.service.d"
+# SSH klíče vygeneruje Fedora až při prvním spuštění sshd v této live relaci.
+mkdir -p "$output_dir/multi-user.target.wants"
+ln -sf /usr/lib/systemd/system/sshd.service "$output_dir/multi-user.target.wants/sshd.service"
+# Vše vzniká v runtime adresáři generátoru a nepřenese se do instalace.
+cat /etc/greetd/config.toml > "$output_dir/fujidora-greetd.toml"
+cat >> "$output_dir/fujidora-greetd.toml" <<'EOF'
+
+[initial_session]
+command = "/usr/bin/dbus-run-session /usr/bin/startplasma-wayland"
+user = "liveuser"
+EOF
+
+cat > "$output_dir/greetd.service.d/50-live-autologin.conf" <<EOF
+[Unit]
+Conflicts=getty@tty1.service
+
+[Service]
+# Generovaný TOML není systemd jednotka: greetd ho musí smět číst i se SELinuxem.
+# Označení obnov při každém startu, také po opětovném spuštění generátorů.
+ExecStartPre=/usr/bin/chcon --reference=/etc/greetd/config.toml "$output_dir/fujidora-greetd.toml"
+ExecStart=
+ExecStart=/usr/bin/greetd --config "$output_dir/fujidora-greetd.toml"
+EOF

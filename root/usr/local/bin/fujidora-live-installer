@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+# XDG autostart patří jen uživateli live média, nikoli nainstalovanému systému.
+[ "$(id -un)" = liveuser ] || exit 0
+cmdline=" $(cat /proc/cmdline) "
+case "$cmdline" in
+    *" rd.live.image "*) ;;
+    *) exit 0 ;;
+esac
+case "$cmdline" in
+    *" root=live:"*) ;;
+    *) exit 0 ;;
+esac
+
+# Použij stejný spouštěč při automatickém i ručním otevření instalátoru.
+exec /usr/local/bin/fujidora-installer

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+# Heslo předá kdialog přímo sudo přes stdout; neukládat je do souboru.
+exec /usr/bin/kdialog --title 'Instalace Fujidory' --password "${1:-Heslo aktuálního uživatele:}"
